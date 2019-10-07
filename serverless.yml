@@ -36,15 +36,13 @@ functions:
   dynamodb_event:               # what an unhelpful name
     runtime: python3.7
     handler: handler.dynamodb_event
-    # dependsOn:
-    #   - ServerlessTransit
-    # events:
-    #   - stream: arn:aws:dynamodb:region:197161828500:table/serverless-transit/stream/
-    # events:
-    #   - stream:
-    #       type: dynamodb
-    #       arn:
-    #         Fn::GetAtt: [ServerlessTransit, StreamArn ]
+    dependsOn:
+      - ServerlessTransit       # does this need suffix DynamoDBTable or something
+    events:
+      - stream:
+          type: dynamodb
+          arn:
+            Fn::GetAtt: [ServerlessTransit, StreamArn ]
 
 resources:
   Resources:
@@ -60,6 +58,8 @@ resources:
             AttributeType: S
           - AttributeName: sk
             AttributeType: S
+          # In DDB we can't define these unless they're part of Table index or LSI/GSI
+          # These are the names defined in the NoSQL Workbench, for reference
           # - AttributeName: subscriber_phone
           #   AttributeType: S
           # - AttributeName: subscriber_starttime
