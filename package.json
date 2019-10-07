@@ -1,0 +1,10 @@
+{
+  "name": "serverlessTransit",
+  "version": "2.0.0",
+  "description": "Serverless Transit alerting system",
+  "main": "handler.js",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@iopipe/iopipe": "^1.17.1"
+  }
+}
