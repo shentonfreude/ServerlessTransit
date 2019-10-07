@@ -1,0 +1,52 @@
+{
+  "Records": [
+    {
+      "eventID": "90ffd72e0219311de88b51bf859df29c",
+      "eventName": "INSERT",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-west-2",
+      "dynamodb": {
+        "ApproximateCreationDateTime": 1570477921.0,
+        "Keys": {
+          "sk": {
+            "S": "07:00:15"
+          },
+          "pk": {
+            "S": "report:wmata:orange"
+          }
+        },
+        "NewImage": {
+          "report_source": {
+            "S": "twitter:@unsuckdcmetro"
+          },
+          "report_text": {
+            "S": "I've never seen the Ballston Metro this hectic. Silver line is shut down except between Ballston and Wiehle Reston. Orange running every 15 min. They are queuing people up to head into D.C. from Ballston. #dcmetro #commute @DCMetroandBus @dcmetrohero"
+          },
+          "transit_line": {
+            "S": "orange"
+          },
+          "sk": {
+            "S": "07:00:15"
+          },
+          "pk": {
+            "S": "report:wmata:orange"
+          },
+          "transit_authority": {
+            "S": "wmata"
+          },
+          "transit_station": {
+            "S": "ballston"
+          },
+          "status": {
+            "S": "delay"
+          }
+        },
+        "SequenceNumber": "100000000006004941982",
+        "SizeBytes": 432,
+        "StreamViewType": "NEW_IMAGE"
+      },
+      "eventSourceARN": "arn:aws:dynamodb:us-west-2:197161828500:table/serverless-transit/stream/2019-10-07T19:09:45.571"
+    }
+  ]
+}

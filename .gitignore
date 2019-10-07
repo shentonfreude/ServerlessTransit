@@ -1,7 +1,8 @@
 # package directories
 node_modules
 jspm_packages
+__pycache__/
 .DS_Store
-
+*~
 # Serverless directories
 .serverless
