@@ -31,6 +31,7 @@ package:
     - package-lock.json
     - package.json
     - yarn.lock
+    - __pycache__/**
 
 functions:
   dynamodb_event:               # what an unhelpful name
