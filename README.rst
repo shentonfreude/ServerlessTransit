@@ -23,6 +23,12 @@ transit_authority: wmata
 transit_line: orange
 transit_station: ballston  # for future use if we can get this specific
 
+One of the judges suggested using separate entries for start and
+stoop, so we can do limited queries, but then need to do the set
+intersection in the code. Or we could put the start time in the SK and
+put the stop time on an attribute with a LSI.
+
+
 Report
 ------
 
